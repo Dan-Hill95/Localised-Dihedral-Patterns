@@ -32,7 +32,7 @@ Here are your next steps:*
    routine, which must be 'pl' (plus), 'mn' (minus), 'sp' (small plus), or 'sm' (small minus).
    For example:
  
-*>> branch = Cont_Patch(1*[-1,2], [0.02, 1.6, -1, 2, 5], 'pl');*
+*>> branch = Cont_Patch([-1,2], [0.02, 1.6, -1, 2, 5], 'pl');*
  
 3. If you want to plot the bifurcation curve of a localised solution, type:
  
