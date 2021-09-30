@@ -4,7 +4,7 @@
 
 Rather than accessing any of the available folders, you should initialise this code by running
 
-Init.m
+*>> Init.m*
 
 
 **After running Init.m, the following guide should appear in your command window:**
