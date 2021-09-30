@@ -2,6 +2,6 @@
 
 **For a more thorough tutorial in secant continuation and access to the original codes, see https://github.com/danieleavitabile/continuation-spatially-extended-systems-tutorial.**
 
-Before accessing any of the available folders, you should initialise this code by running
+Rather than accessing any of the available folders, you should initialise this code by running
 
 Init.m
