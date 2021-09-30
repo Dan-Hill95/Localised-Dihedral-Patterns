@@ -1,1 +1,1 @@
-These are supplementary codes for other routines. Do not attmept to run any of these codes on their own.
+These codes are designed to be accessed from their parent directory. Do not attempt to run these codes in this current folder.
