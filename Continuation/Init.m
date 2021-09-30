@@ -15,7 +15,7 @@ fprintf('%s\n',['   r_max is the radial boundary and mu gives an approximate loc
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['>> a = MatchSoln((1/10)*ones(1,11), 6, 100, 1e-4);']); 
 fprintf('%s\n',[' ']); 
-fprintf('%s\n',['2. If you want to find localised dihedral patterns in the 2-3 SH equation, type:']); 
+fprintf('%s\n',['2. If you want to find and continue localised dihedral patterns in the 2-3 SH equation, type:']); 
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['>> branch = Cont_Patch(x, p, Dir);']); 
 fprintf('%s\n',[' ']); 
@@ -32,7 +32,7 @@ fprintf('%s\n',[' ']);
 fprintf('%s\n',['>> ExploreBifurcationDiagram(''FolderName/branch.mat'',idVar);']); 
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['   where FolderName is the data folder that is created by Cont_Patch, and idVar is the column of the']); 
-fprintf('%s\n',['   branch measures to be plot. For example, for a data folder called ''D2_Patch_pl'', you would type:']); 
+fprintf('%s\n',['   branch measures to be plotted. For example, for a data folder called ''D2_Patch_pl'', you would type:']); 
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['>> ExploreBifurcationDiagram(''D2_Patch_pl/branch.mat'',5);']); 
 fprintf('%s\n',[' ']); 
