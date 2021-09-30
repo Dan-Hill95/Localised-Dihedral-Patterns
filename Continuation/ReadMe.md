@@ -22,7 +22,7 @@ Here are your next steps:
  
 *>> a = MatchSoln((1/10) * ones(1,11), 6, 100, 1e-4);*
  
-2. If you want to find localised dihedral patterns in the 2-3 SH equation, type:
+2. If you want to find and continue localised dihedral patterns in the 2-3 SH equation, type:
  
 *>> branch = Cont_Patch(x, p, Dir);*
  
@@ -39,7 +39,7 @@ Here are your next steps:
 *>> ExploreBifurcationDiagram('FolderName/branch.mat',idVar);*
  
    where FolderName is the data folder that is created by Cont_Patch, and idVar is the column of the
-   branch measures to be plot. For example, for a data folder called 'D2_Patch_pl', you would type:
+   branch measures to be plotted. For example, for a data folder called 'D2_Patch_pl', you would type:
  
 *>> ExploreBifurcationDiagram('D2_Patch_pl/branch.mat',5);*
  
