@@ -9,8 +9,8 @@ Rather than accessing any of the available folders, you should initialise this c
 
 **After running Init.m, the following guide should appear in your command window:**
 
-*These codes are for the continuation of localised dihedral patterns in the 2-3 Swift-Hohenberg equation.
-Here are your next steps:*
+These codes are for the continuation of localised dihedral patterns in the 2-3 Swift-Hohenberg equation.
+Here are your next steps:
 
 1. If you want to solve the (n+1)-dimensional algebraic matching condition for localised dihedral
    patterns, type:
