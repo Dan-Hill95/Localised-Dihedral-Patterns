@@ -1,9 +1,13 @@
-# ETDRDPIF
 Exponential time differencing real distinct poles integrating factor
 
-Source code to create the results in the paper arXiv:2001.11220
+Source code from paper arXiv:2001.11220
 
-In each folder there is a detailed description on how to compile and to obtain the numerical results
+**For original codes, see: https://github.com/kleefeld80/ETDRDPIF**
 
-For academic purpose and rapid prototyping, a Python version is included as well.
+To recreate Figure 1 b) in our paper, run:
 
+*>> vonHardenbergLOD2D_IFETDRDP(dt,steps);*
+
+where dt is the time step, and steps denotes the number of spatial mesh points in each coordinate direction. In the paper, we used the following:
+
+*>> vonHardenbergLOD2D_IFETDRDP(1/80,156);*
