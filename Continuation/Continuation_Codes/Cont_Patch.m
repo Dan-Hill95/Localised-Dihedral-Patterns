@@ -7,10 +7,12 @@
 %
 %% Inputs
 %           x=[x[0],...,x[N]]           - Initial guess for the matching condition
-%                                         For 3|m, a good initial guess will be of
+%                                         For 6|m, a good initial guess will be of
 %                                         the form x=y*[1,...,1], for some small y.
-%                                         For 3~|m, a good initial guess will be of
+%                                         For 3~|m, 2|m, a good initial guess will be of
 %                                         the form x=y*[-1,2,2,-1,2,2...], for some small y.
+%                                         For 3|m, 2~|m, a good initial guess will be of
+%                                         the form x=y*[-1,1,1,-1,1,1...], for some small y.
 %           p=[mu, nu, kappa, m, N+1]   - Initial parameters of system; 
 %                                         mu is the bifurcation parameter, 
 %                                         nu is the quadratic coefficient,
@@ -26,7 +28,7 @@
 % equation via finite-difference methods and continues solutions in mu-parameter
 % space. For U(r,theta) such that
 %
-% U(r,theta) = u[0](r) + 2*sum_{i=1}^{N} u[i](r)*cos(2*m*i*theta), 
+% U(r,theta) = u[0](r) + 2*sum_{i=1}^{N} u[i](r)*cos(m*i*theta), 
 % then each u[i](r) satisfies 
 %
 % 0= F[i](u[i]):= -(1+d^2_r + 1/r*d_r - (2*m*i/r)^2)^2 u[i] - mu*u[i] + f[i](U).
