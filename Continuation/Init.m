@@ -10,7 +10,7 @@ fprintf('%s\n',['   patterns, type:']);
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['>> a = MatchSoln(x, m, r_max, mu);']); 
 fprintf('%s\n',[' ']); 
-fprintf('%s\n',['   where x=[x[0],x[1],...,x[n]] is your initial guess, m is the dihedral lattice (must be even!),']); 
+fprintf('%s\n',['   where x=[x[0],x[1],...,x[n]] is your initial guess, m is the dihedral lattice,']); 
 fprintf('%s\n',['   r_max is the radial boundary and mu gives an approximate localisation. For example:']); 
 fprintf('%s\n',[' ']); 
 fprintf('%s\n',['>> a = MatchSoln((1/10)*ones(1,11), 6, 100, 1e-4);']); 
