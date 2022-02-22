@@ -17,7 +17,7 @@ Here are your next steps:
  
 *>> a = MatchSoln(x, m, r_max, mu);*
  
-   where x=[x[0],x[1],...,x[n]] is your initial guess, m is the dihedral lattice (must be even!),
+   where x=[x[0],x[1],...,x[n]] is your initial guess, m is the dihedral lattice,
    r_max is the radial boundary and mu gives an approximate localisation. For example:
  
 *>> a = MatchSoln((1/10) * ones(1,11), 6, 100, 1e-4);*
