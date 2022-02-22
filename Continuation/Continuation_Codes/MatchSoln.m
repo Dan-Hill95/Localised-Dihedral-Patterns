@@ -4,10 +4,13 @@
 %r_max is the maximum range of the mesh
 %mu is the localisation of the solution
 
-%For 3|k, a good initial guess will be of the form x=y*[1,...,1], for some
+%For 6|k, a good initial guess will be of the form x=y*[1,...,1], for some
 %small y
 
-%For 3~|k, a good initial guess will be of the form x=y*[-0.5, 1, 1, -0.5,1,1,...,-0.5,1,1], for some
+%For 3~|k but 2|k, a good initial guess will be of the form x=y*[-0.5, 1, 1, -0.5,1,1,...,-0.5,1,1], for some
+%small y
+
+%For 3|k but 2~|k, a good initial guess will be of the form x=y*[-1, 1, 1, -1,1,1,...,-1,1,1], for some
 %small y
 function a_out=MatchSoln(x,k,r_max,mu)
 %Introduce parameters
@@ -17,12 +20,9 @@ a0=x.*ones(1,N+1);
 L = 1000;
 r = (0:L-1)'*(r_max/(L-1));
 t=0:0.01:2*pi;
-if mod(k,2)>0
-    error('k must be an even natural number.');
-end
 
 %fsolve options
-options = optimset('Display','iter','TolFun',1e-7);
+options = optimset('Display','iter','TolFun',1e-9);
 
 %Solving the (N+1) D_{k} matching condition
 a_out=fsolve(@(a) match(a,k),a0,options);
@@ -30,7 +30,7 @@ a_out=fsolve(@(a) match(a,k),a0,options);
 %% Plotting the solution: 
 %1. Defining the radial amplitudes u[j](r)
 for j=1:N+1
-u(1+(j-1)*L:j*L) = a_out(j)*(-1)^(k*(j-1)/2)*besselj(k*(j-1),r).*exp(-sqrt(mu)*r);
+u(1+(j-1)*L:j*L) = a_out(j)*besselj(k*(j-1),r).*exp(-sqrt(mu)*r);
 end
 %2. Introduce meshes for polar approximation
   [R,T]=meshgrid(r,t);
@@ -41,14 +41,19 @@ end
       UU(:,:,j)=U(:,1+(j-1)*L:j*L);
       UU(:,:,j)=UU(:,:,j).*cos(k*(j-1).*T);
   end
-%4. Plot contour figure
+
 scrsz = get(0,'ScreenSize');
   z1 = figure('Position',[scrsz(3)/4 scrsz(4)/4 scrsz(3)/3 scrsz(4)/2]);
   k1=surf(R.*cos(T), R.*sin(T),sum(UU,3));
+  v=norm(max(sum(UU,3)));
+  h=max(2,v);
   pbaspect([1 1 1]); 
   view(0,90);
+  axis([-sqrt(2)*r_max/2 sqrt(2)*r_max/2 -sqrt(2)*r_max/2 sqrt(2)*r_max/2 -0.5*h h]);
   k1.FaceColor='flat';
   k1.EdgeColor='none';
+  newmap=brighten(parula(4),.4);
+colormap(z1,newmap);
   set(gca,'Color','none','XColor','none','YColor','none','ZColor','none');
   grid off
 end

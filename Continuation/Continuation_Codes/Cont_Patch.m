@@ -55,11 +55,6 @@ end
 % Otherwise, the k-dimensional matching solution is embedded in the 
 % n-dimensional ODE system.
 
-% For this analysis, we require that the dihedral lattice is even.
-if mod(m,2)>0
-    error('m must be an even natural number.');
-end
-
 % Setting up mesh parameters, collected as mesh_params, including
 % finite-difference matrices
 SetupDiffMats_Patch;
@@ -78,7 +73,7 @@ close all                   % Closing the plot form MatchSoln.
 u0 = zeros(k*N,1);          
 % Defining u0 as in the plot in MatchSoln for initial guess
 for i=0:k-1
-    u0(1+(i)*N:(i+1)*N)= a(i+1)*(-1)^(m*(i)/2)*besselj(m*(i),r).*exp(-sqrt(p(1))*r);
+    u0(1+(i)*N:(i+1)*N)= a(i+1)*(-1)^(m*i)*besselj(m*(i),r).*exp(-sqrt(p(1))*r);
 end
     
 myproblemHandle = @(u) Equation_Patch(u,p,mesh_params);
