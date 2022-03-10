@@ -4,4 +4,4 @@ For the numerical continuation of localised dihedral patterns in the planar quad
 
 For the recreation of Figure 1 b) (Convergence of a localised hexagon patch in the von Hardenberg vegetation model) using exponential time-steppers, see the folder 'Exp_Time_Step'
 
-For the verification of our computer-assisted proof of Theorem 5.8, see the folder 'Integral-Equation-Proof'.
+For the verification of our computer-assisted proof of Theorem 5.8, see the folder 'Integral-Equation-Proof-Code'.
