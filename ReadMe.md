@@ -1,4 +1,6 @@
-This repository contains the MATLAB files to reproduce the data and figures from 'Approximate Localised Dihedral Patterns Near a Turing Instability' by Dan J. Hill, Jason J. Bramburger and David J.B. Lloyd (2021). A link to the pre-print copy can be found here: <link>
+This repository contains the MATLAB files to reproduce the data and figures from 'Approximate Localised Dihedral Patterns Near a Turing Instability' by Dan J. Hill, Jason J. Bramburger and David J.B. Lloyd (2021). 
+
+A copy of the paper can be found here: 
 
 For the numerical continuation of localised dihedral patterns in the planar quadratic-cubic Swift-Hohenberg equation, see the folder 'Continuation'.
 
