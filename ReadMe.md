@@ -1,4 +1,4 @@
-This repository contains the MATLAB files to reproduce the data and figures from 'Approximate Localised Dihedral Patterns Near a Turing Instability' by Dan J. Hill, Jason J. Bramburger and David J.B. Lloyd (2021). 
+This repository contains the MATLAB files to reproduce the data and figures from 'Approximate Localised Dihedral Patterns Near a Turing Instability' by Dan J. Hill, Jason J. Bramburger and David J.B. Lloyd (2022). 
 
 A link to a copy of the paper will be added soon.
 
